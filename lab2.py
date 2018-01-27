@@ -175,4 +175,17 @@ print(currentCoord)
 print(nextCoord)
 
 
+
+
+num_lines = sum(1 for line in open(sys.argv[1], 'r'))
+
+waypointsList = []
+
+for i in range(1,num_lines+1):
+    pos = linecache.getline(sys.argv[1],i)
+    i= convertCoord(list(cutCoord(pos)))
+    waypointsList.append(i)
+
+
+
 # maintenant je dois resoudre l'equation pour savoir quels sont les params a rentrer pour aller au second waypoint
